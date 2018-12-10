@@ -5,3 +5,4 @@
 *.parquet
 spark-warehouse/
 *.csv
+.DS_Store
