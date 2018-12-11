@@ -1,36 +1,55 @@
 # Daylight saving time impact on web usage around the world
 
 # Abstract
+
 The daylight saving time (DST) has been debated more and more recently, bringing into discussion whether it should be abolished or not. While most of the countries do not observe daylight saving time, most of Europe and North America does, making it an important problem, especially for us Europeans.
-We will analyze the impact that the DST has on several timezones related to the web usage. In this regard, we will use tweets to monitor the posting behaviour of Twitter users around the time of hour changes in different parts of the world. As the dataset provided on the cluster comprises only posts from the 16th June 2017, we are going to collect a dataset of our own for the two hour change periods, using the Twitter API.
-We would like to see how the posting distribution transitions as the hour change occurs, in order to observe the users' behaviour change due to the hour change.
+We will analyze the impact that the DST has on several timezones related to the web usage. In this regard, we will use different datasets to monitor the posting behavior of users around the time of hour changes in different parts of the world. To frame the change of general behavior, the use of several platforms is necessary.
+We will study the data distributions of StackOverflow, Wikipedia and a gym to derive hypotheses and verify them.
+We would like to study the impact of this time change on the distribution of positions on different scales, and the time taken to find a "normal" activity.
 
 # Research questions
+
 We would like to answer the following questions:
-1. Does the hour change have an immediate effect on the tweets' distribution?
+
+1. Does the hour change have an immediate effect on the users' behavior?
 2. Does one of the hour changes (spring time or winter time) have a more drastic impact than the other?
 3. Does the hour change affect people in different locations in different ways?
-Other questions may follow if we identify interesting patterns in the data.
+   Other questions may follow if we identify interesting patterns in the data.
 
 # Dataset
+
 Given that the Twitter dataset provided consists only of posts from the 16th June, we will need to collect another dataset using the Twitter API.
-The posts come in the format of a list of dictionary objects, each describing a published post or a deleted one. We will only monitor the published posts, which also provide the date the post was created (through the *created_at* tag) and the timezone of the user (in the *user/time_zone* field). The date and the timezone will constitute the main data that we are going to use in our analysis. The data will consist of posts in the range of about a week before and after the hour changes.
+The posts come in the format of a list of dictionary objects, each describing a published post or a deleted one. We will only monitor the published posts, which also provide the date the post was created (through the _created_at_ tag) and the timezone of the user (in the _user/time_zone_ field). The date and the timezone will constitute the main data that we are going to use in our analysis. The data will consist of posts in the range of about a week before and after the hour changes.
 As an extension, we also consider making use of the Wikipedia dataset to enrich our observations.
 
-# A list of internal milestones up until project milestone 2
-Until milestone 2 we want to make the following steps:
-1. Get acquainted with the Twitter API.
-2. Download the posts needed.
-3. Analyze the posts time distribution.
-4. Look for additional interesting patterns.
-5. Decide if we also need to use Wikipedia data to produce more observations.
+1. StackOverFlow dataset : The dataset was provided during the HW3. StackOverflow is the most popular programming-related Q&A website. It serves as a platform for users to ask and answer questions and to vote questions and answers up or down. Users of StackOverflow can earn reputation points and "badges"; for example, a person is awarded 10 reputation points for receiving an "up" vote on an answer given to a question, and 5 points for the "up" vote on a question asked. Also, users receive badges for their valued contributions, which represents a kind of gamification of the traditional Q&A site.
+2. Wikipedia dataset : The data available in time by Wikipedia are limited so as not to saturate their servers. That's why we had to write a script using the wikipedia API to extract the changes that occurred one week before and one week after the time change. Indeed, with 1.7 changes per second, we were unable to download more data from Wikipedia, especially for legal problems.
+   So we extracted 100 changes in every 15 minutes and format it into a JSON file.
+   This dataset has a size of 595 MB. Details about the API and our request is available into our notebook.
+3. Gym dataset : The dataset consists of 26,000 people counts (about every 10 minutes) over the last year. In addition, we gathered extra info including weather and semester-specific information that might affect how crowded it is. The label is the number of people, which I'd like to predict given some subset of the features.
+   The dataset is coming from Kaggle at the [link](https://www.mediawiki.org/wiki/API:Logevents).
 
-# TODO
-1. Crawl / get data:
-  * [Wiki Logs](https://www.mediawiki.org/wiki/API:Logevents)
-  * [Twitter API](https://developer.twitter.com/en/docs/tweets/batch-historical/overview)
+# Project Steps
 
-2. Plot the distributions
+The project respected the different milestones as described below:
+
+1. Milestone 1
+
+- data scraping
+- Hypotheses and first exploration of the data
+
+2. Milestone 2
+
+- Data Wrangling
+- Statistical and mathematical analysis of data
+- Choice of final datasets
+
+3. Milestone 3 (Final)
+
+- Advanced data analysis
+- Verification of hypotheses
+- Report and presentation preparation
 
 # Some useful links
+
 1. [Wikipedia Python Client](https://mwclient.readthedocs.io/en/master/reference/site.html?highlight=changes#mwclient.client.Site.recentchanges)
