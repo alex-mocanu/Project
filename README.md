@@ -27,7 +27,7 @@ As an extension, we also consider making use of the Wikipedia dataset to enrich 
    So we extracted 100 changes in every 15 minutes and format it into a JSON file.
    This dataset has a size of 595 MB. Details about the API and our request is available into our notebook.
 3. Gym dataset : The dataset consists of 26,000 people counts (about every 10 minutes) over the last year. In addition, we gathered extra info including weather and semester-specific information that might affect how crowded it is. The label is the number of people, which I'd like to predict given some subset of the features.
-   The dataset is coming from Kaggle at the [link](https://www.mediawiki.org/wiki/API:Logevents).
+   The dataset is coming from Kaggle at the [link](https://www.kaggle.com/nsrose7224/crowdedness-at-the-campus-gym/version/2).
 
 # Project Steps
 
