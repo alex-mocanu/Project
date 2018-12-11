@@ -5,7 +5,7 @@
 The daylight saving time (DST) has been debated more and more recently, bringing into discussion whether it should be abolished or not. While most of the countries do not observe daylight saving time, most of Europe and North America does, making it an important problem, especially for us Europeans.
 We will analyze the impact that the DST has on several timezones related to the web usage. In this regard, we will use different datasets to monitor the posting behavior of users around the time of hour changes in different parts of the world. To frame the change of general behavior, the use of several platforms is necessary.
 We will study the data distributions of StackOverflow, Wikipedia and a gym to derive hypotheses and verify them.
-We would like to study the impact of this time change on the distribution of positions on different scales, and the time taken to find a "normal" activity.
+We would like to study the impact of this time change on the distribution of positions on different scales, and the time taken to find a "normal" activity. We focused our study on the US geographical area, having encountered difficulty to obtain localized data for users, probably outside the legal framework.
 
 # Research questions
 
@@ -13,8 +13,8 @@ We would like to answer the following questions:
 
 1. Does the hour change have an immediate effect on the users' behavior?
 2. Does one of the hour changes (spring time or winter time) have a more drastic impact than the other?
-3. Does the hour change affect people in different locations in different ways?
-   Other questions may follow if we identify interesting patterns in the data.
+3. Does the hour change affect only digital behavior or also habits in terms of health?
+4. How long do users take to find a more conventional pace?
 
 # Dataset
 
