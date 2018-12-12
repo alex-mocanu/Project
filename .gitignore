@@ -6,3 +6,7 @@
 spark-warehouse/
 *.csv
 .DS_Store
+
+*.png
+*.jpg
+*.jped
