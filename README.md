@@ -50,6 +50,12 @@ The project respected the different milestones as described below:
 - Verification of hypotheses
 - Report and presentation preparation
 
+#Contributions
+
+- Alexandre: Wikipedia data scraping script, wikipedia data analysis, general report formatting, "Immediate Effect" part (wikipedia part) & "Find these habits", README update
+- Alex: data analysis of StackOverflow, "Immediate Effect" section (StackOverflow part) & "Spring or Winter?" section, last proofreading and analyzes improvement
+- Rusu: Gym data scraping, Gym dataset analysis, "Health habits", ideas provider
+
 # Some useful links
 
 1. [Wikipedia Python Client](https://mwclient.readthedocs.io/en/master/reference/site.html?highlight=changes#mwclient.client.Site.recentchanges)
